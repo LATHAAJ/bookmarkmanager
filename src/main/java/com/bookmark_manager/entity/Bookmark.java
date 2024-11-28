@@ -32,7 +32,7 @@ public class Bookmark {
   private ZonedDateTime createdAt;
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "folder_id")
+  @JoinColumn(name = "folder_id", nullable = true)
   @JsonBackReference
   private Folder folder;
 }
