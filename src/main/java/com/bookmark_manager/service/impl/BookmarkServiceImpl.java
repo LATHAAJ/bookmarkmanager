@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -38,7 +38,7 @@ public class BookmarkServiceImpl implements BookmarkService {
   @Override
   public Bookmark createBookmark(BookmarkDto bookmarkDto) {
     Bookmark bookmark = bookmarkMapper.toEntity(bookmarkDto);
-    bookmark.setCreatedAt(ZonedDateTime.now(ZoneOffset.UTC));
+    bookmark.setCreatedAt(LocalDateTime.now(ZoneOffset.UTC));
     return bookmarkRepository.save(bookmark);
   }
 

@@ -3,7 +3,6 @@ package com.bookmark_manager.service.impl;
 import com.bookmark_manager.dto.FolderDto;
 import com.bookmark_manager.entity.Folder;
 import com.bookmark_manager.mapper.FolderMapper;
-import com.bookmark_manager.repository.BookmarkRepository;
 import com.bookmark_manager.repository.FolderRepository;
 import com.bookmark_manager.service.FolderService;
 import jakarta.persistence.EntityNotFoundException;
